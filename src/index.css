@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Spotify-inspired dark design system. All colors MUST be HSL. */
+
+@layer base {
+  :root,
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 141 73% 42%;
+    --primary-foreground: 0 0% 4%;
+
+    --primary-glow: 141 76% 55%;
+
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 66%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 141 73% 42%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 141 73% 42%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 141 73% 42%;
+    --sidebar: 0 0% 4%;
+
+    --chart-1: 141 73% 42%;
+    --chart-2: 141 76% 55%;
+    --chart-3: 0 0% 66%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 0 0% 90%;
+
+    --font-sans: 'Figtree', system-ui, sans-serif;
+    --font-serif: 'Figtree', system-ui, sans-serif;
+    --font-mono: 'Figtree', system-ui, sans-serif;
+
+    --gradient-hero: linear-gradient(180deg, hsl(141 40% 18%) 0%, hsl(0 0% 9%) 55%, hsl(0 0% 7%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 13%) 0%, hsl(0 0% 9%) 100%);
+
+    --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.35);
+    --shadow-sm: 0 2px 6px 0 hsl(0 0% 0% / 0.4);
+    --shadow: 0 4px 12px 0 hsl(0 0% 0% / 0.45);
+    --shadow-md: 0 8px 24px 0 hsl(0 0% 0% / 0.5);
+    --shadow-lg: 0 12px 32px 0 hsl(0 0% 0% / 0.55);
+    --shadow-xl: 0 16px 48px 0 hsl(0 0% 0% / 0.6);
+    --shadow-2xl: 0 24px 64px 0 hsl(0 0% 0% / 0.7);
+
+    --tracking-normal: -0.01em;
+    --spacing: 0.25rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    letter-spacing: var(--tracking-normal);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+  }
+
+  nav a, nav button:not([class*="size-icon"]), footer a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Custom Scrollbar - Spotify style */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0 0% 25%);
+    border: 3px solid hsl(var(--background));
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(0 0% 40%);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(0 0% 25%) hsl(var(--background));
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.35);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .sp-surface {
+    @apply rounded-lg border border-border bg-card transition-all duration-300;
+  }
+
+  .sp-surface-hover {
+    @apply hover:bg-accent hover:border-primary/40 hover:-translate-y-0.5;
+  }
+
+  .sp-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-foreground transition-colors hover:border-primary/60 hover:text-primary;
+  }
+
+  .sp-eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground;
+  }
+}
