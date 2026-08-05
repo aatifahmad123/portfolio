@@ -18,7 +18,7 @@ const curiosities = [
     title: "Caesar Cipher Challenge",
     description: (
       <>
-        Connect to <strong className="text-foreground">crypto-aatif.duckdns.org</strong> and port{" "}
+        Connect to <strong className="text-foreground">65.0.11.146</strong> and port{" "}
         <strong className="text-foreground">6000</strong>. Send a JSON object: {"{"}"get": "cipher"{"}"}. You will
         receive a fun challenge - decode the hidden message and see if you got it right!
       </>
