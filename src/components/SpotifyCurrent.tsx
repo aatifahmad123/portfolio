@@ -16,7 +16,7 @@ const SpotifyCurrent: React.FC<SpotifyCurrentProps> = ({ className = "" }) => {
         href={profileUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full max-w-[300px] overflow-hidden rounded-xl border border-border/80 bg-[#121212] p-1.5 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 sm:max-w-[320px]"
+        className="block w-full max-w-[224px] overflow-hidden rounded-xl border border-border/80 bg-[#121212] p-1.5 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 sm:max-w-[240px]"
         aria-label="View Spotify Profile"
       >
         <img

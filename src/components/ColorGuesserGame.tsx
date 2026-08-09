@@ -146,25 +146,22 @@ const calculateDeltaE = (lab1: { l: number; a: number; b: number }, lab2: { l: n
   );
 };
 
-// Calculate color similarity using Delta E (0-100%)
+// Calculate color similarity using a softer perceptual curve (0-100%)
 const calculateSimilarity = (hex1: string, hex2: string): number => {
   const lab1 = hexToLab(hex1);
   const lab2 = hexToLab(hex2);
 
   const deltaE = calculateDeltaE(lab1, lab2);
 
-  // Delta E interpretation:
-  // 0-1: Not perceptible by human eyes
-  // 1-2: Perceptible through close observation
-  // 2-10: Perceptible at a glance
-  // 11-49: Colors are more similar than opposite
-  // 100+: Colors are exact opposites
+  if (deltaE < 1.5) {
+    return 100;
+  }
 
-  // Max meaningful Delta E is around 100 (opposite colors)
-  const maxDeltaE = 100;
-  const similarity = Math.max(0, ((maxDeltaE - deltaE) / maxDeltaE) * 100);
+  // Linear mapping makes near matches feel too harsh.
+  // This exponential curve keeps the score intuitive for visually close colors.
+  const similarity = 100 * Math.exp(-deltaE / 22);
 
-  return Math.round(similarity);
+  return Math.max(0, Math.min(100, Math.round(similarity)));
 };
 
 // Confetti particle component

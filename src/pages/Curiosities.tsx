@@ -138,19 +138,45 @@ const Curiosities = () => {
                 ))}
               </div>
 
-              <div className="mt-10 flex flex-col items-center gap-3">
-                <SpotifyCurrent />
-                <p className="text-sm text-muted-foreground">
-                  Spotify widget powered by{" "}
-                  <a
-                    href="https://github.com/kittinan/spotify-github-profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-foreground transition-colors hover:text-primary"
+              <div className="mt-10">
+                <div className="relative overflow-hidden rounded-2xl border border-border/80 bg-[#121212] px-4 py-6 sm:px-6 md:px-8">
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-y-0 left-0 hidden w-28 md:block"
                   >
-                    kittinan/spotify-github-profile
-                  </a>
-                </p>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,hsl(141_40%_18%/0.34),transparent_38%),radial-gradient(circle_at_70%_80%,hsl(141_40%_18%/0.18),transparent_32%),linear-gradient(180deg,hsl(0_0%_9%/0.25)_0%,hsl(0_0%_7%/0)_100%)]" />
+                    <div className="absolute inset-y-4 right-0 w-px bg-gradient-to-b from-transparent via-border/70 to-transparent" />
+                    <div className="absolute left-5 top-6 h-16 w-16 rounded-full border border-border/70 bg-primary/5 blur-[1px]" />
+                    <div className="absolute bottom-6 left-8 h-3 w-3 rounded-full bg-primary/40" />
+                    <div className="absolute bottom-14 left-12 h-2.5 w-10 rounded-full bg-primary/15" />
+                  </div>
+
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-y-0 right-0 hidden w-28 md:block"
+                  >
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,hsl(141_40%_18%/0.32),transparent_38%),radial-gradient(circle_at_30%_75%,hsl(141_40%_18%/0.18),transparent_32%),linear-gradient(180deg,hsl(0_0%_9%/0.25)_0%,hsl(0_0%_7%/0)_100%)]" />
+                    <div className="absolute inset-y-4 left-0 w-px bg-gradient-to-b from-transparent via-border/70 to-transparent" />
+                    <div className="absolute right-5 top-7 h-20 w-20 rounded-full border border-border/70 bg-primary/5 blur-[1px]" />
+                    <div className="absolute bottom-7 right-8 h-3 w-3 rounded-full bg-primary/40" />
+                    <div className="absolute bottom-14 right-12 h-2.5 w-10 rounded-full bg-primary/15" />
+                  </div>
+
+                  <div className="relative z-10 flex flex-col items-center gap-3">
+                      <SpotifyCurrent />
+                      <p className="text-center text-sm text-muted-foreground">
+                        Spotify widget powered by{" "}
+                        <a
+                          href="https://github.com/kittinan/spotify-github-profile"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-foreground transition-colors hover:text-primary"
+                        >
+                          kittinan/spotify-github-profile
+                        </a>
+                      </p>
+                  </div>
+                </div>
               </div>
 
               {/* Color Guesser Game */}
