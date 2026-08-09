@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ColorGuesserGame from "@/components/ColorGuesserGame";
+import SpotifyCurrent from "@/components/SpotifyCurrent";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -90,9 +91,13 @@ const Curiosities = () => {
                 <ArrowLeft className="h-3.5 w-3.5" />
                 Back to Home
               </Link>
-              <p className="sp-eyebrow mb-2">Radio</p>
-              <h1 className="mb-3 text-4xl md:text-5xl font-extrabold text-foreground">Curiosities</h1>
-              <p className="text-sm text-muted-foreground">Fun projects, experiments, and things I've been exploring.</p>
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div className="max-w-xl">
+                  <p className="sp-eyebrow mb-2">Radio</p>
+                  <h1 className="mb-3 text-4xl md:text-5xl font-extrabold text-foreground">Curiosities</h1>
+                  <p className="text-sm text-muted-foreground">Fun projects, experiments, and things I've been exploring.</p>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -131,6 +136,21 @@ const Curiosities = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-10 flex flex-col items-center gap-3">
+                <SpotifyCurrent />
+                <p className="text-sm text-muted-foreground">
+                  Spotify widget powered by{" "}
+                  <a
+                    href="https://github.com/kittinan/spotify-github-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-foreground transition-colors hover:text-primary"
+                  >
+                    kittinan/spotify-github-profile
+                  </a>
+                </p>
               </div>
 
               {/* Color Guesser Game */}
