@@ -8,6 +8,7 @@ const experiences = [
     role: "Software Analyst",
     company: "ICICI Bank",
     logo: iciciLogo,
+    location: "Mumbai, India",
     period: "Jul 2026 - Present",
     description:
       "Contributing to the GenAI team by developing and enhancing AI-powered features for the iPal virtual assistant within the iMobile app. Leveraging Vertex AI, Dialogflow and Node.js to build scalable conversational experiences that enhance customer interactions and digital banking services."
@@ -16,6 +17,7 @@ const experiences = [
     role: "Technology Intern",
     company: "ICICI Bank",
     logo: iciciLogo,
+    location: "Hyderabad, India",
     period: "May - Jul 2025",
     description:
       "Developed an AI-powered call analysis system using Google Cloud's Chirp3 HD voices, Speech-to-Text APIs and fine-tuned FLAN-T5 model using PEFT for generating summaries, resolutions and emotion insights. Designed MySQL-based data pipelines and deployed interactive performance dashboard via Metabase on GCP."
@@ -24,6 +26,7 @@ const experiences = [
     role: "Software Engineering Intern",
     company: "Robolens.ai",
     logo: robolensLogo,
+    location: "Remote",
     period: "Jan - Mar 2025",
     description:
       "Integrated a text-to-video generation feature capable of producing 6+ second videos at 24 FPS using Amazon Nova Reel from AWS Bedrock, contributing to a 40% increase in platform traffic. Developed responsive UI components using React and Tailwind CSS as part of a microfrontend architecture, improving modularity."
@@ -46,7 +49,7 @@ const ExperienceSection = () => {
                 </span>
                 <div>
                   <h3 className="text-base font-bold text-foreground">{exp.role}</h3>
-                  <p className="text-sm text-muted-foreground">{exp.company}</p>
+                  <p className="text-sm text-muted-foreground">{exp.company} {exp.location ? `· ${exp.location}` : null}</p>
                 </div>
               </div>
               <span className="rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold text-muted-foreground">
