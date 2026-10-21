@@ -5,11 +5,11 @@ const skillCategories = [
   },
   {
     category: "AI / ML / NLP",
-    skills: ["Scikit-learn", "PyTorch", "LangChain", "GANs (WGAN-GP)", "CNNs", "RAG systems", "LLM fine-tuning (PEFT)", "NLP pipelines"]
+    skills: ["Scikit-learn", "PyTorch", "LangChain", "GANs", "CNNs", "RAG systems", "LLM fine-tuning", "Crew agents", "NLP pipelines"]
   },
   {
     category: "Web & App",
-    skills: ["React", "React Native", "Tailwind CSS", "Node.js", "FastAPI", "Streamlit", "Gradio", "Dash", "Responsively"]
+    skills: ["React", "React Native", "Tailwind CSS", "Node.js", "FastAPI", "Streamlit", "Gradio", "SqlAlchemy", "Responsively"]
   },
   {
     category: "Data & Visualization",
@@ -21,7 +21,7 @@ const skillCategories = [
   },
   {
     category: "Cloud, DevOps & APIs",
-    skills: ["AWS (EC2, S3)", "GCP", "Docker", "Postman", "Groq", "Swagger", "Cloudinary"]
+    skills: ["AWS (EC2, S3)", "GCP", "Docker", "Kubernetes", "Postman", "Swagger", "Cloudinary"]
   },
 ];
 
@@ -29,7 +29,7 @@ import Section from "./Section";
 
 const SkillsSection = () => {
   return (
-    <Section eyebrow="Your top genres" title="Skills">
+    <Section title="Skills">
       <div className="grid gap-4 md:grid-cols-2">
         {skillCategories.map((cat, index) => (
           <div key={index} className="rounded-lg border border-border bg-background p-5">

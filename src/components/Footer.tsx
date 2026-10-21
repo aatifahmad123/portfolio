@@ -11,6 +11,7 @@ const socials = [
   { label: "+91-6207392585", href: "tel:+916207392585", icon: Phone },
   { label: "GitHub", href: "https://github.com/aatifahmad123", icon: Github },
   { label: "LinkedIn", href: "https://linkedin.com/in/aatifahmad123", icon: Linkedin },
+  { label: "Twitter", href: "https://x.com/aatif_ahmad_123", icon: null },
 ];
 
 const Footer = () => {
@@ -19,7 +20,6 @@ const Footer = () => {
       <div className="rounded-lg border border-border bg-card p-6 md:p-8">
         {/* Hobbies */}
         <div className="mb-8">
-          <p className="sp-eyebrow mb-1.5">Off the clock</p>
           <h3 className="mb-4 text-xl font-extrabold text-foreground">Hobbies</h3>
           <div className="grid gap-3 sm:grid-cols-3">
             {hobbies.map((hobby, index) => (
@@ -38,12 +38,7 @@ const Footer = () => {
 
         {/* Contact */}
         <div className="mb-6">
-          <p className="sp-eyebrow mb-1.5">Get in touch</p>
           <h3 className="mb-3 text-xl font-extrabold text-foreground">Contact</h3>
-          <p className="max-w-2xl text-sm text-muted-foreground">
-            I am actively seeking opportunities in AI engineering and software development, where I
-            can work on challenging problems and build systems that scale and matter.
-          </p>
         </div>
 
         <div className="flex flex-wrap gap-3">
@@ -55,7 +50,11 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
             >
-              <s.icon className="h-4 w-4" />
+              {s.icon ? (
+                <s.icon className="h-4 w-4" />
+              ) : (
+                <span className="text-sm font-bold leading-none" aria-hidden="true">𝕏</span>
+              )}
               {s.label}
             </a>
           ))}

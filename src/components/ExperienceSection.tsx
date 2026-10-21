@@ -5,13 +5,13 @@ import robolensLogo from "@/assets/logos/robolens.jpg";
 
 const experiences = [
   {
-    role: "Software Analyst",
+    role: "SWE - Agentic AI",
     company: "ICICI Bank",
     logo: iciciLogo,
     location: "Mumbai, India",
     period: "Jul 2026 - Present",
     description:
-      "Contributing to the GenAI team by developing and enhancing AI-powered features for the iPal virtual assistant within the iMobile app. Leveraging Vertex AI, Dialogflow and Node.js to build scalable conversational experiences that enhance customer interactions and digital banking services."
+      "Engineered a hybrid RAG pipeline combining 2 retrieval strategies (FAISS + BM25) with custom RRF fusion and CrossEncoder reranking, supporting 6+ formats including PDF, DOCX, PPTX, XLSX, XLS and TXT. Deployed the FastAPI-based RAG service using Docker + Kubernetes, integrating Redis for chat memory/caching."
   },
   {
     role: "Technology Intern",
@@ -35,7 +35,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <Section eyebrow="On repeat" title="Experience">
+    <Section title="Experience">
       <div className="space-y-4">
         {experiences.map((exp, index) => (
           <div

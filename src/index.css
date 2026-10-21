@@ -3,55 +3,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Spotify-inspired dark design system. All colors MUST be HSL. */
+/* Black-and-white editorial design system with a soft periwinkle highlight. */
 
 @layer base {
   :root,
   .dark {
-    --background: 0 0% 7%;
+    --background: 0 0% 4%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 9%;
+    --card: 0 0% 8%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 13%;
+    --popover: 0 0% 12%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 141 73% 42%;
+    --primary: 226 100% 92%;
     --primary-foreground: 0 0% 4%;
 
-    --primary-glow: 141 76% 55%;
+    --primary-glow: 226 100% 96%;
 
-    --secondary: 0 0% 16%;
+    --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 16%;
-    --muted-foreground: 0 0% 66%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 67%;
 
-    --accent: 0 0% 20%;
+    --accent: 226 22% 18%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 141 73% 42%;
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 226 100% 92%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 0 0% 4%;
+    --sidebar-background: 0 0% 3%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 141 73% 42%;
+    --sidebar-primary: 226 100% 92%;
     --sidebar-primary-foreground: 0 0% 4%;
-    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent: 226 22% 18%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 141 73% 42%;
-    --sidebar: 0 0% 4%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 226 100% 92%;
+    --sidebar: 0 0% 3%;
 
-    --chart-1: 141 73% 42%;
-    --chart-2: 141 76% 55%;
+    --chart-1: 226 100% 92%;
+    --chart-2: 226 100% 96%;
     --chart-3: 0 0% 66%;
     --chart-4: 0 0% 40%;
     --chart-5: 0 0% 90%;
@@ -60,9 +60,9 @@
     --font-serif: 'Figtree', system-ui, sans-serif;
     --font-mono: 'Figtree', system-ui, sans-serif;
 
-    --gradient-hero: linear-gradient(180deg, hsl(141 40% 18%) 0%, hsl(0 0% 9%) 55%, hsl(0 0% 7%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(226 30% 15%) 0%, hsl(0 0% 8%) 42%, hsl(0 0% 4%) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 13%) 0%, hsl(0 0% 9%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 10%) 0%, hsl(0 0% 7%) 100%);
 
     --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
     --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.35);
@@ -76,15 +76,63 @@
     --tracking-normal: -0.01em;
     --spacing: 0.25rem;
   }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 226 55% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --primary-glow: 226 70% 58%;
+
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 226 45% 94%;
+    --accent-foreground: 0 0% 7%;
+
+    --border: 0 0% 84%;
+    --input: 0 0% 84%;
+    --ring: 226 55% 42%;
+
+    --sidebar-background: 0 0% 96%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 226 55% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 226 45% 94%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 84%;
+    --sidebar-ring: 226 55% 42%;
+    --sidebar: 0 0% 96%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(226 45% 94%) 0%, hsl(0 0% 100%) 58%, hsl(0 0% 98%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 100%);
+
+    --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.04);
+    --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.06);
+    --shadow-sm: 0 2px 6px 0 hsl(0 0% 0% / 0.08);
+    --shadow: 0 4px 12px 0 hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 8px 24px 0 hsl(0 0% 0% / 0.12);
+    --shadow-lg: 0 12px 32px 0 hsl(0 0% 0% / 0.14);
+    --shadow-xl: 0 16px 48px 0 hsl(0 0% 0% / 0.16);
+    --shadow-2xl: 0 24px 64px 0 hsl(0 0% 0% / 0.18);
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
-  }
-
-  html {
-    color-scheme: dark;
   }
 
   body {
@@ -102,7 +150,7 @@
     @apply transition-colors duration-200;
   }
 
-  /* Custom Scrollbar - Spotify style */
+  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
@@ -113,23 +161,23 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: hsl(0 0% 25%);
+    background: hsl(var(--muted-foreground));
     border: 3px solid hsl(var(--background));
     border-radius: 999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(0 0% 40%);
+    background: hsl(var(--foreground));
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: hsl(0 0% 25%) hsl(var(--background));
+    scrollbar-color: hsl(var(--muted-foreground)) hsl(var(--background));
   }
 
   ::selection {
-    background: hsl(var(--primary) / 0.35);
-    color: hsl(var(--foreground));
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
   }
 }
 

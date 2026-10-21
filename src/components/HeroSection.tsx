@@ -1,4 +1,4 @@
-import { Github, Linkedin, Play, BadgeCheck, MapPin, ExternalLink, FileText } from "lucide-react";
+import { Github, Linkedin, Play, BadgeCheck, MapPin, FileText } from "lucide-react";
 import { useState, useEffect } from "react";
 import profileImage from "@/assets/profile.png";
 
@@ -47,8 +47,7 @@ const HeroSection = () => {
               Aatif Ahmad
             </h1>
             <p className="mb-4 max-w-2xl text-base md:text-lg font-semibold text-foreground/90 mx-auto lg:mx-0">
-              Software Analyst at ICICI Bank (M1) and founder building Crevvy, a platform focused on elevating the
-              Indian creator economy.
+              SWE - Agentic AI @ ICICI Bank | IITJ’26
             </p>
             <p className="mb-7 inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />
@@ -74,16 +73,7 @@ const HeroSection = () => {
                 GitHub
               </a>
               <a
-                href="https://crevvy.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Crevvy
-              </a>
-              <a
-                href="https://drive.google.com/file/d/1MTI8WQmOosyE-jAKzwy959Kh5Kr-M_G2/view?usp=sharing"
+                href="https://drive.google.com/file/d/1vDPnYo-38d1joAumSZqakMVM5ArpbgZr/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent"

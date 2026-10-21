@@ -7,18 +7,18 @@ import { Link } from "react-router-dom";
 
 const featuredProjects = [
   {
+    title: "AI Newsroom with Crew AI",
+    description:
+      "Developed an AI Newsroom using Python and CrewAI to orchestrate multiple AI agents for news research, content generation, and editorial review. Explored role-based agent collaboration to automate the news production pipeline, from gathering information to generating publication-ready content.",
+    techStack: ["Python", "Crew Agents", "Gradio"],
+    githubUrl: "https://github.com/aatifahmad123/playing-with-crewai"
+  },
+  {
     title: "Linux-Native Desktop Music Player",
     description:
       "The Spotify desktop application felt too feature-loaded to me when I just wanted to listen to my saved playlist. So, I developed a Linux-native desktop music player in C++ with Qt GUI and SFML, using a circular doubly linked list to model real-world playlist behavior. Features a clean, minimal interface, album artwork display and smooth next/previous navigation.",
-    techStack: ["C++", "Qt", "SFML", "Data Structures", "Linux"],
+    techStack: ["C++", "Qt", "SFML", "Linux"],
     githubUrl: "https://github.com/aatifahmad123/qt-sfml-playlist"
-  },
-  {
-    title: "LitRAG: Harry Potter Edition",
-    description:
-      "Built a CPU-only RAG system that answers queries by retrieving relevant passages from a custom document corpus (Harry Potter Books [1-3]). Combined semantic search (FAISS) with a Groq-hosted LLaMA model to generate grounded, source-backed answers.",
-    techStack: ["LangChain", "FAISS", "Groq-hosted LLaMA", "RAG"],
-    githubUrl: "https://github.com/aatifahmad123/rag-harry-potter"
   },
   {
     title: "SVD-based Book Recommendation System",
@@ -31,6 +31,13 @@ const featuredProjects = [
 ];
 
 const otherProjects = [
+  {
+    title: "LitRAG: Harry Potter Edition",
+    description:
+      "Built a CPU-only RAG system that answers queries by retrieving relevant passages from a custom document corpus (Harry Potter Books [1-3]). Combined semantic search (FAISS) with a Groq-hosted LLaMA model to generate grounded, source-backed answers.",
+    techStack: ["LangChain", "FAISS", "Groq-hosted LLaMA", "RAG"],
+    githubUrl: "https://github.com/aatifahmad123/rag-harry-potter"
+  },
   {
     title: "RAG-Based Coding Assistant",
     description:
@@ -110,14 +117,12 @@ const Projects = () => {
                 <ArrowLeft className="h-3.5 w-3.5" />
                 Back to Home
               </Link>
-              <p className="sp-eyebrow mb-2">Discography</p>
               <h1 className="text-4xl md:text-5xl font-extrabold text-foreground">Projects Directory</h1>
             </div>
           </section>
 
           <section className="px-4 md:px-8 lg:px-12 py-4">
             <div className="rounded-lg border border-border bg-card p-6 md:p-8">
-              <p className="sp-eyebrow mb-1.5">Top tracks</p>
               <h2 className="mb-5 text-2xl font-extrabold text-foreground">Featured</h2>
               <div className="mb-10 grid gap-4 md:grid-cols-2">
                 {featuredProjects.map((project, index) => (
@@ -125,7 +130,6 @@ const Projects = () => {
                 ))}
               </div>
 
-              <p className="sp-eyebrow mb-1.5">Deep cuts</p>
               <h2 className="mb-5 text-2xl font-extrabold text-foreground">Other Projects</h2>
               <div className="grid gap-4 md:grid-cols-2">
                 {otherProjects.map((project, index) => (

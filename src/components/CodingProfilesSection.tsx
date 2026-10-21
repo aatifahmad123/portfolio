@@ -15,7 +15,7 @@ const codingProfiles = [
 
 const CodingProfilesSection = () => {
   return (
-    <Section id="profiles" eyebrow="Playlists" title="Coding Profiles">
+    <Section id="profiles" title="Coding Profiles">
       <div className="grid gap-4 sm:grid-cols-2">
         {codingProfiles.map((profile, index) => (
           <a
