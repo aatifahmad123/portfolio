@@ -3,18 +3,20 @@ import { useState, useEffect } from "react";
 import profileImage from "@/assets/profile.png";
 
 const HeroSection = () => {
-  const [daysLived, setDaysLived] = useState(0);
+  const [age, setAge] = useState("0.0000000");
 
   useEffect(() => {
-    const calculateDays = () => {
-      const birthDate = new Date(2005, 2, 15); // March 15, 2005
-      const today = new Date();
-      const diffTime = today.getTime() - birthDate.getTime();
-      setDaysLived(Math.floor(diffTime / (1000 * 60 * 60 * 24)));
+    const calculateAge = () => {
+      const birthDate = new Date(2005, 2, 15, 0, 0, 0, 0); // March 15, 2005
+      const now = new Date();
+      const meanTropicalYearInMilliseconds = 365.242189 * 24 * 60 * 60 * 1000;
+      const elapsedYears = (now.getTime() - birthDate.getTime()) / meanTropicalYearInMilliseconds;
+
+      setAge(elapsedYears.toFixed(7));
     };
 
-    calculateDays();
-    const interval = setInterval(calculateDays, 1000 * 60 * 60);
+    calculateAge();
+    const interval = setInterval(calculateAge, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -33,7 +35,7 @@ const HeroSection = () => {
                 <span className="block w-[3px] bg-primary animate-equalize" style={{ height: "100%", animationDelay: "400ms" }} />
               </span>
               <p className="text-xs text-muted-foreground">
-                Alive for <span className="font-bold text-primary">{daysLived.toLocaleString()}</span> days
+                <span className="font-bold text-primary">{age}</span> years old
               </p>
             </div>
           </div>
