@@ -49,7 +49,7 @@ const HeroSection = () => {
               Aatif Ahmad
             </h1>
             <p className="mb-4 max-w-2xl text-base md:text-lg font-semibold text-foreground/90 mx-auto lg:mx-0">
-              SWE - Agentic AI @ ICICI Bank | IITJ’26
+              SWE - Agentic AI @ ICICI Bank | IITJ’26 | Occasional Hiker
             </p>
             <p className="mb-7 inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />

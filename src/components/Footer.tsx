@@ -12,6 +12,7 @@ const socials = [
   { label: "GitHub", href: "https://github.com/aatifahmad123", icon: Github },
   { label: "LinkedIn", href: "https://linkedin.com/in/aatifahmad123", icon: Linkedin },
   { label: "Twitter", href: "https://x.com/aatif_ahmad_123", icon: null },
+  { label: "Spotify", href: "https://open.spotify.com/user/3136nvwkcr6btvi3te3cxvwdr4qi", icon: Music },
 ];
 
 const Footer = () => {
