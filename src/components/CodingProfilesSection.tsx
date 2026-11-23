@@ -23,7 +23,7 @@ const CodingProfilesSection = () => {
             href={profile.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-4 rounded-lg border border-border bg-background p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-accent"
+            className="group flex items-center gap-4 rounded-lg border border-border bg-background p-4"
           >
             <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border bg-card p-2">
               <img src={profile.logo} alt={`${profile.name} logo`} className="h-full w-full object-contain" loading="lazy" />
@@ -32,7 +32,7 @@ const CodingProfilesSection = () => {
               <span className="block text-sm font-bold text-foreground">{profile.name}</span>
               <span className="block text-xs text-muted-foreground">@{profile.handle}</span>
             </span>
-            <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary" />
+            <ExternalLink className="h-4 w-4 text-primary" />
           </a>
         ))}
       </div>

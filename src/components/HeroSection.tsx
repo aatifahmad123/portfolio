@@ -60,7 +60,7 @@ const HeroSection = () => {
                 href="https://linkedin.com/in/aatifahmad123"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-primary bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full border border-primary bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:border-primary/80 hover:bg-primary/90"
               >
                 <Play className="h-4 w-4" fill="currentColor" />
                 LinkedIn
@@ -69,7 +69,7 @@ const HeroSection = () => {
                 href="https://github.com/aatifahmad123"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
               >
                 <Github className="h-4 w-4" />
                 GitHub
@@ -78,7 +78,7 @@ const HeroSection = () => {
                 href="https://drive.google.com/file/d/1vDPnYo-38d1joAumSZqakMVM5ArpbgZr/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
               >
                 <FileText className="h-4 w-4" />
                 Resume

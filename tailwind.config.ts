@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
@@ -107,9 +106,9 @@ export default {
   			'2xl': 'var(--shadow-2xl)'
   		},
   		fontFamily: {
-			sans: ['Figtree', 'system-ui', 'sans-serif'],
-			serif: ['Figtree', 'system-ui', 'sans-serif'],
-			mono: ['Figtree', 'system-ui', 'sans-serif']
+			sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+			serif: ['Space Grotesk', 'system-ui', 'sans-serif'],
+			mono: ['IBM Plex Sans', 'system-ui', 'monospace']
   		}
   	}
   },

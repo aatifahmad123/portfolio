@@ -21,7 +21,7 @@ const EducationSection = () => {
         {education.map((item, index) => (
           <div
             key={index}
-            className="flex gap-4 rounded-lg border border-border bg-background p-5 transition-colors hover:border-primary/40"
+            className="group flex gap-4 rounded-lg border border-border bg-background p-5"
           >
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border bg-card">
               <GraduationCap className="h-5 w-5 text-primary" />

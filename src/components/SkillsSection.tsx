@@ -32,7 +32,10 @@ const SkillsSection = () => {
     <Section title="Skills">
       <div className="grid gap-4 md:grid-cols-2">
         {skillCategories.map((cat, index) => (
-          <div key={index} className="rounded-lg border border-border bg-background p-5">
+          <div
+            key={index}
+            className="rounded-lg border border-border bg-background p-5"
+          >
             <h3 className="sp-eyebrow mb-3">{cat.category}</h3>
             <div className="flex flex-wrap gap-2">
               {cat.skills.map((skill, idx) => (

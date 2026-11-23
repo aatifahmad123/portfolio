@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 
 const curiosities = [
   {
+    title: "Firstpod",
+    description: "Curiosity, compiled. Regular posts on software, AI, systems, and the ideas shaping the world.",
+    tech: ["Tech Blogs"],
+    stats: "✍️ 7 posts so far",
+    link: "https://firstpod-three.vercel.app",
+    linkLabel: "Visit Site",
+  },
+  {
     title: "PixelView",
     description:
       "Upload, hover or tap, and lock a pixel to get precise color values in different color formats.",
@@ -94,7 +102,7 @@ const Curiosities = () => {
             <div className="rounded-lg border border-border bg-gradient-hero p-6 md:p-10">
               <Link
                 to="/"
-                className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-muted-foreground transition-colors hover:border-primary/60 hover:text-foreground"
+                className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
               >
                 <ArrowLeft className="h-3.5 w-3.5" />
                 Back to Home
@@ -115,7 +123,7 @@ const Curiosities = () => {
                 {curiosities.map((item, index) => (
                   <div
                     key={index}
-                    className="flex h-full flex-col rounded-lg border border-border bg-background p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-accent"
+                    className="flex h-full flex-col rounded-lg border border-border bg-background p-5"
                   >
                     <h3 className="mb-2 text-base font-bold text-foreground">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
@@ -134,7 +142,7 @@ const Curiosities = () => {
                           href={item.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary bg-primary px-3.5 py-1.5 text-xs font-bold text-primary-foreground transition-transform hover:scale-105"
+                          className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
                         >
                           {item.linkLabel}
                           <ExternalLink className="h-3 w-3" />

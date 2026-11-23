@@ -41,14 +41,14 @@ const FeaturedProjects = () => {
             <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">Milestones</h3>
             <a
               href="#achievements"
-              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3.5 py-1.5 text-xs font-bold text-muted-foreground transition-colors hover:border-primary/60 hover:text-foreground"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
             >
               Show all
               <ArrowRight className="h-3.5 w-3.5" />
             </a>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            <div className="flex h-full flex-col rounded-lg border border-border bg-background p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-accent">
+            <div className="group flex h-full flex-col rounded-lg border border-border bg-background p-4">
               <p className="text-base font-bold text-foreground">Expert at Kaggle</p>
               <p className="mb-4 text-sm text-muted-foreground">High-Quality Datasets</p>
               <div className="mt-auto">
@@ -56,9 +56,9 @@ const FeaturedProjects = () => {
                   href="https://www.kaggle.com/aatifahmad123"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary/60 hover:text-primary"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
                 >
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <ExternalLink className="h-3.5 w-3.5 text-primary" />
                   Profile
                 </a>
               </div>
@@ -72,7 +72,7 @@ const FeaturedProjects = () => {
             <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">Projects</h3>
             <Link
               to="/projects"
-              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3.5 py-1.5 text-xs font-bold text-muted-foreground transition-colors hover:border-primary/60 hover:text-foreground"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
             >
               Show all
               <ArrowRight className="h-3.5 w-3.5" />

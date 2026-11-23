@@ -383,7 +383,7 @@ const ColorGuesserGame = () => {
   const isHighScore = score !== null && score >= 90;
 
   return (
-    <Card className="bg-card border-border hover:border-primary/50 transition-colors relative overflow-hidden">
+    <Card className="bg-card border-border relative overflow-hidden">
       {/* Confetti Animation */}
       {showConfetti && (
         <div className="absolute inset-0 pointer-events-none z-10">
@@ -501,14 +501,14 @@ const ColorGuesserGame = () => {
           {!revealed ? (
             <button
               onClick={handleReveal}
-              className="inline-flex items-center gap-2 px-8 py-2 border border-border rounded-lg text-foreground hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 px-8 py-2 border border-border rounded-lg text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary text-sm font-medium"
             >
               Reveal
             </button>
           ) : (
             <button
               onClick={handleNextRound}
-              className="inline-flex items-center gap-2 px-8 py-2 border border-border rounded-lg text-foreground hover:border-primary/50 hover:bg-primary/5 transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 px-8 py-2 border border-border rounded-lg text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary text-sm font-medium"
             >
               <RotateCcw className="h-4 w-4" />
               Next Color

@@ -16,7 +16,7 @@ const NotFound = () => {
         <p className="mb-6 text-sm text-muted-foreground">We couldn't find the page you were looking for.</p>
         <a
           href="/"
-          className="inline-flex items-center gap-2 rounded-full border border-primary bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-transform hover:scale-105"
+          className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
         >
           Back to Home
         </a>

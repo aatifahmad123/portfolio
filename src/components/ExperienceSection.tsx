@@ -40,7 +40,7 @@ const ExperienceSection = () => {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="rounded-lg border border-border bg-background p-5 transition-colors hover:border-primary/40"
+            className="rounded-lg border border-border bg-background p-5"
           >
             <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
               <div className="flex items-center gap-3">

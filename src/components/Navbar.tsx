@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Star, Moon, Sun } from "lucide-react";
+import { Menu, X, Star } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useTheme } from "./ThemeProvider";
 
 const navLinks = [
   { label: "About", href: "#about", sectionId: "about", isSection: true },
@@ -17,7 +16,6 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -61,7 +59,7 @@ const Navbar = () => {
                 <button
                   key={link.label}
                   onClick={() => handleNavClick(link)}
-                  className="rounded-full px-3 py-1.5 text-sm font-semibold text-muted-foreground hover:bg-accent hover:text-foreground"
+                  className="rounded-full border border-transparent px-3 py-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
                 >
                   {link.label}
                 </button>
@@ -69,35 +67,21 @@ const Navbar = () => {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className="flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold text-muted-foreground hover:bg-accent hover:text-foreground"
+                  className="flex items-center gap-1 rounded-full border border-transparent px-3 py-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
                 >
                   {link.label}
                   {"hasStar" in link && link.hasStar && <Star className="h-3 w-3 text-primary" fill="currentColor" />}
                 </Link>
               )
             )}
-            <button
-              onClick={toggleTheme}
-              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-              className="flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground hover:bg-accent hover:text-foreground"
-            >
-              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
             <button
-              onClick={toggleTheme}
-              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground hover:bg-accent transition-colors"
-            >
-              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
-            <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground hover:bg-accent transition-colors"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
             >
               {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
@@ -112,7 +96,7 @@ const Navbar = () => {
                 <button
                   key={link.label}
                   onClick={() => handleNavClick(link)}
-                  className="block w-full rounded-md px-3 py-2 text-left text-sm font-semibold text-muted-foreground hover:bg-accent hover:text-foreground"
+                  className="block w-full rounded-md border border-transparent px-3 py-2 text-left text-sm font-semibold text-muted-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
                 >
                   {link.label}
                 </button>
@@ -121,7 +105,7 @@ const Navbar = () => {
                   key={link.label}
                   to={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block rounded-md px-3 py-2 text-sm font-semibold text-muted-foreground hover:bg-accent hover:text-foreground"
+                  className="block rounded-md border border-transparent px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
                 >
                   <span className="flex items-center gap-1">
                     {link.label}

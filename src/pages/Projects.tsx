@@ -112,7 +112,7 @@ const Projects = () => {
             <div className="rounded-lg border border-border bg-gradient-hero p-6 md:p-10">
               <Link
                 to="/"
-                className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-muted-foreground transition-colors hover:border-primary/60 hover:text-foreground"
+                className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
               >
                 <ArrowLeft className="h-3.5 w-3.5" />
                 Back to Home

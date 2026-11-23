@@ -23,7 +23,7 @@ const FavoritesSection = () => {
         {favorites.map((fav, index) => (
           <div
             key={index}
-            className="flex items-center gap-3 rounded-lg border border-border bg-background p-3 transition-colors hover:border-primary/40 hover:bg-accent"
+            className="group flex items-center gap-3 rounded-lg border border-border bg-background p-3"
           >
             <span className="w-5 text-right text-xs font-bold text-muted-foreground">{index + 1}</span>
             <span className="flex-1 text-sm font-semibold text-foreground">{fav}</span>

@@ -36,7 +36,10 @@ const AchievementsSection = () => {
           </div>
           <div className="space-y-3">
             {achievements.map((ach, index) => (
-              <div key={index} className="rounded-lg border border-border bg-card p-3">
+              <div
+                key={index}
+                className="rounded-lg border border-border bg-card p-3"
+              >
                 <p className="text-sm font-bold text-foreground">{ach.title}</p>
                 <p className="text-xs text-muted-foreground">{ach.org}</p>
               </div>
@@ -56,13 +59,13 @@ const AchievementsSection = () => {
                 href={cert.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-start gap-3 rounded-lg border border-border bg-card p-3 transition-colors hover:border-primary/50 hover:bg-primary/5"
+                className="group flex items-start gap-3 rounded-lg border border-border bg-card p-3"
               >
                 <span className="flex-1">
                   <span className="block text-sm font-bold text-foreground">{cert.title}</span>
                   <span className="block text-xs text-muted-foreground">{cert.org}</span>
                 </span>
-                <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground group-hover:text-primary" />
+                <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               </a>
             ))}
           </div>
