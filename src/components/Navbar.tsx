@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Star } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import thunderIcon from "@/assets/logos/thunder.svg";
 
 const navLinks = [
   { label: "About", href: "#about", sectionId: "about", isSection: true },
   { label: "Featured", href: "#featured-projects", sectionId: "featured-projects", isSection: true },
   { label: "Profiles", href: "#profiles", sectionId: "profiles", isSection: true },
-  { label: "Curiosities", href: "/curiosities", isSection: false, hasStar: true },
+  { label: "Curiosities", href: "/curiosities", isSection: false, hasThunder: true },
   { label: "Projects", href: "/projects", isSection: false },
   { label: "Experience", href: "#experience", sectionId: "experience", isSection: true },
   { label: "Skills", href: "#skills", sectionId: "skills", isSection: true },
@@ -70,7 +71,9 @@ const Navbar = () => {
                   className="flex items-center gap-1 rounded-full border border-transparent px-3 py-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
                 >
                   {link.label}
-                  {"hasStar" in link && link.hasStar && <Star className="h-3 w-3 text-primary" fill="currentColor" />}
+                  {"hasThunder" in link && link.hasThunder && (
+                    <img src={thunderIcon} alt="" aria-hidden="true" className="h-4 w-4" />
+                  )}
                 </Link>
               )
             )}
@@ -109,7 +112,9 @@ const Navbar = () => {
                 >
                   <span className="flex items-center gap-1">
                     {link.label}
-                    {"hasStar" in link && link.hasStar && <Star className="h-3 w-3 text-primary" fill="currentColor" />}
+                    {"hasThunder" in link && link.hasThunder && (
+                      <img src={thunderIcon} alt="" aria-hidden="true" className="h-4 w-4" />
+                    )}
                   </span>
                 </Link>
               )

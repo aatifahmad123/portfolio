@@ -1,5 +1,5 @@
-import { Heart } from "lucide-react";
 import Section from "./Section";
+import thunderIcon from "@/assets/logos/thunder.svg";
 
 const favorites = [
   "Groq",
@@ -27,7 +27,7 @@ const FavoritesSection = () => {
           >
             <span className="w-5 text-right text-xs font-bold text-muted-foreground">{index + 1}</span>
             <span className="flex-1 text-sm font-semibold text-foreground">{fav}</span>
-            <Heart className="h-4 w-4 text-primary" fill="currentColor" />
+            <img src={thunderIcon} alt="" aria-hidden="true" className="h-5 w-5" />
           </div>
         ))}
       </div>
