@@ -75,7 +75,7 @@ const HeroSection = () => {
                 GitHub
               </a>
               <a
-                href="https://drive.google.com/file/d/1vDPnYo-38d1joAumSZqakMVM5ArpbgZr/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/1TFm9bMAmkrcLn2GTiphImRWKdJmncgzX?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary/60 hover:bg-accent hover:text-primary"
