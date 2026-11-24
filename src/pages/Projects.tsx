@@ -9,16 +9,16 @@ const featuredProjects = [
   {
     title: "AI Newsroom with Crew AI",
     description:
-      "Developed an AI Newsroom using Python and CrewAI to orchestrate multiple AI agents for news research, content generation, and editorial review. Explored role-based agent collaboration to automate the news production pipeline, from gathering information to generating publication-ready content.",
+      "I found Crew.ai very interesting so engineered a multi-agent system that turns any topic into a fact-checked news article using 3 agents (Researcher, Fact-checker, Editor) chained sequentially. Integrated DuckDuckGo web search tool so articles use current information and made the agents flag unverified claims.",
     techStack: ["Python", "Crew Agents", "Gradio"],
     githubUrl: "https://github.com/aatifahmad123/playing-with-crewai"
   },
   {
-    title: "Linux-Native Desktop Music Player",
+    title: "Intelligent LLM Routing with Jev",
     description:
-      "The Spotify desktop application felt too feature-loaded to me when I just wanted to listen to my saved playlist. So, I developed a Linux-native desktop music player in C++ with Qt GUI and SFML, using a circular doubly linked list to model real-world playlist behavior. Features a clean, minimal interface, album artwork display and smooth next/previous navigation.",
-    techStack: ["C++", "Qt", "SFML", "Linux"],
-    githubUrl: "https://github.com/aatifahmad123/qt-sfml-playlist"
+      "First project at the first job. Built a RAG-based chatbot that answers questions from a finance textbook (Hull's book on Equity and Derivatives). Used the trending decision model Jev from Typesafe.ai to route queries between Ollama-run local Llama 3.2 (3B) model and Groq-hosted GPT-OSS (120B) model based on complexity. Featured Chroma DB as the vector store and Sqlite to store chat history.",
+    techStack: ["RAG", "Jev", "Ollama", "Llama 3.2", "GPT-OSS", "Chroma DB", "Sqlite"],
+    githubUrl: "https://github.com/aatifahmad123/jev-llm-routing"
   },
   {
     title: "SVD-based Book Recommendation System",
@@ -32,11 +32,11 @@ const featuredProjects = [
 
 const otherProjects = [
   {
-    title: "LitRAG: Harry Potter Edition",
+    title: "Linux-Native Desktop Music Player",
     description:
-      "Built a CPU-only RAG system that answers queries by retrieving relevant passages from a custom document corpus (Harry Potter Books [1-3]). Combined semantic search (FAISS) with a Groq-hosted LLaMA model to generate grounded, source-backed answers.",
-    techStack: ["LangChain", "FAISS", "Groq-hosted LLaMA", "RAG"],
-    githubUrl: "https://github.com/aatifahmad123/rag-harry-potter"
+      "The Spotify desktop application felt too feature-loaded to me when I just wanted to listen to my saved playlist. So, I developed a Linux-native desktop music player in C++ with Qt GUI and SFML, using a circular doubly linked list to model real-world playlist behavior. Features a clean, minimal interface, album artwork display and smooth next/previous navigation.",
+    techStack: ["C++", "Qt", "SFML", "Linux"],
+    githubUrl: "https://github.com/aatifahmad123/qt-sfml-playlist"
   },
   {
     title: "RAG-Based Coding Assistant",
@@ -118,6 +118,9 @@ const Projects = () => {
                 Back to Home
               </Link>
               <h1 className="text-4xl md:text-5xl font-extrabold text-foreground">Projects Directory</h1>
+              <p className="mt-3 text-sm text-muted-foreground">
+                End-to-end builds across AI, software, and practical tools.
+              </p>
             </div>
           </section>
 

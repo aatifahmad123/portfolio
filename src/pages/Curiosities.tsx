@@ -20,6 +20,7 @@ const curiosities = [
       "Upload, hover or tap, and lock a pixel to get precise color values in different color formats.",
     note: "Simplifying visual color analysis for designers, developers and students.",
     tech: ["Color formats"],
+    stats: "🎨 6 color formats",
     link: "https://pixelview-six.vercel.app",
     linkLabel: "Visit site",
   },
@@ -28,20 +29,9 @@ const curiosities = [
     description:
       "Find PG listings across major cities of India with all details - room types, prices, amenities. Listings are crowdsourced, so anyone can add one. Search your PG without the noise.",
     tech: ["Crowdsourced"],
+    stats: "🏠 100+ listings target",
     link: "https://onlypgs.in",
     linkLabel: "Visit site",
-  },
-  {
-    title: "Caesar Cipher Challenge",
-    description: (
-      <>
-        Connect to <strong className="text-foreground">65.0.11.146</strong> and port{" "}
-        <strong className="text-foreground">6000</strong>. Send a JSON object: {"{"}"get": "cipher"{"}"}. You will
-        receive a fun challenge - decode the hidden message and see if you got it right!
-      </>
-    ),
-    tech: ["AWS EC2"],
-    stats: "🎯 28 correct solves so far",
   },
   {
     title: "Docker Essentials",
@@ -76,6 +66,7 @@ const curiosities = [
       "A lightweight Chrome extension for high-quality speech-to-text dictation that works on any website. Download the CRX file from the repository and enjoy the extension!",
     note: "Coming soon on Chrome Web Store",
     tech: ["Chrome Extension"],
+    stats: "🎙️ STT model from Groq",
     link: "https://github.com/aatifahmad123/slate",
     linkLabel: "View repository",
   },
@@ -110,7 +101,7 @@ const Curiosities = () => {
               <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                 <div className="max-w-xl">
                   <h1 className="mb-3 text-4xl md:text-5xl font-extrabold text-foreground">Curiosities</h1>
-                  <p className="text-sm text-muted-foreground">Fun projects, experiments, and things I've been exploring.</p>
+                  <p className="text-sm text-muted-foreground">A collection of experiments and side projects driven by curiosity.</p>
                 </div>
               </div>
             </div>
