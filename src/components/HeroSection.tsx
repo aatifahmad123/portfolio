@@ -48,7 +48,7 @@ const HeroSection = () => {
             <h1 className="mb-5 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
               Aatif Ahmad
             </h1>
-            <p className="mb-4 max-w-2xl text-base md:text-lg font-semibold text-foreground/90 mx-auto lg:mx-0">
+            <p className="mb-4 max-w-2xl font-sans text-base md:text-lg font-semibold text-foreground/90 mx-auto lg:mx-0">
               SWE - Agentic AI @ ICICI Bank | IITJ’26 | Occasional Hiker
             </p>
             <p className="mb-7 inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground">
